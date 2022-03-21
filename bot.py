@@ -12,10 +12,9 @@ OWNER_ID = os.environ['OWNER_ID']
 #Button
 START_BUTTONS=[
     [
-        InlineKeyboardButton('Source', url='https://github.com/X-Gorn/File-Sharing'),
-        InlineKeyboardButton('Project Channel', url='https://t.me/xTeamBots'),
+        InlineKeyboardButton('Manage', url='https://t.me/bcddgblg'),
+        InlineKeyboardButton('Support', url='https://t.me/anogroups'),
     ],
-    [InlineKeyboardButton('Author', url="https://t.me/xgorn")],
 ]
 
 # Running bot
@@ -26,7 +25,7 @@ xbot = Client('File-Sharing', api_id=APP_ID, api_hash=API_HASH, bot_token=BOT_TO
 @xbot.on_message(filters.command('start') & filters.private)
 async def _startfile(bot, update):
     if update.text == '/start':
-        await update.reply_text(f"I'm File-Sharing!\nYou can share any telegram files and get the sharing link using this bot!\n\n/help for more details...", True, reply_markup=InlineKeyboardMarkup(START_BUTTONS))
+        await update.reply_text(f"I'm File-Sharing!\nYou can share any telegram files! Saya di bangun oleh Ano\n\n/help untuk menu bantuan...", True, reply_markup=InlineKeyboardMarkup(START_BUTTONS))
         return
     up = await bot.get_messages(update.from_user.id, update.message_id)
     if len(update.command) != 2:
@@ -65,7 +64,7 @@ async def _startfile(bot, update):
 # Help msg
 @xbot.on_message(filters.command('help') & filters.private)
 async def _help(bot, update):
-    await update.reply_text("Supported file types:\n\n- Video\n- Audio\n- Photo\n- Document\n- Sticker\n- GIF\n- Voice note\n- Video note\n\n If bot didn't respond, contact @xgorn", True)
+    await update.reply_text("Supported file types:\n\n- Video\n- Audio\n- Photo\n- Document\n- Sticker\n- GIF\n- Voice note\n- Video note\n\n If bot didn't respond, contact @bcddgblg", True)
 
 
 # Store file
