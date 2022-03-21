@@ -9,7 +9,7 @@
   ],
   "success_url": "https://github.com/X-Gorn/File-Sharing",
   "website": "https://github.com/X-Gorn",
-  "repository": "https://github.com/syahrizalemano/File-Sharing-main",
+  "repository": "https://github.com/syahrizalemano/File-Sharing",
   "env": {
     "BOT_TOKEN": {
       "description": "Your bot token, as a string.",
